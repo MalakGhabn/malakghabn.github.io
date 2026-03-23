@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malak Ghabn Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    a{
+        color: #38bdf8;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #020617;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* Floating vertical nav */
+    .side-nav {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 65vh;
+      justify-content: space-around;
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px 10px;
+      border-radius: 50px;
+      border: 0.1px solid;
+      border-color: #dddddd2b;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+
+    .side-nav a {
+      text-decoration: none;
+      color: #38bdf8;
+      font-size: 13px;
+      text-align: center;
+      padding: 8px 10px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      background: rgba(56, 189, 248, 0.8);
+      color: #020617;
+    }
+
+    /* Tablet responsiveness */
+    @media (max-width: 1160px) {
+      .side-nav {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: row;
+        height: auto;
+        width: 90%;
+        border-radius: 30px;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      .side-nav a {
+        font-size: 13px;
+        padding: 6px 8px;
+      }
+
+      section {
+        padding: 70px 30px;
+      }
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .side-nav {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: row;
+        height: auto;
+        width: 90%;
+        border-radius: 30px;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      .side-nav a {
+        font-size: 12px;
+        padding: 6px 8px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+    }
+
+    section {
+      padding: 60px 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
+
+    h2 {
+      color: #38bdf8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Malak Ghabn</h1>
+  <p>Computer & Cyber Security Engineer</p>
+</header>
+
+<!-- Vertical Bubble Nav -->
+<div class="side-nav">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a fourth-year Computer Engineering student at AASTMT with a strong interest in cybersecurity and penetration testing. I chose this field because I have always been passionate about coding, computer networks, and understanding how systems work at a deeper level.
+  </p>
+  <p>
+    I have experience with C, C#, JavaScript, and Python, and I am currently expanding my skills in cybersecurity. I have worked with Kali Linux and Burp Suite, and completed over 50 labs on PortSwigger, covering vulnerabilities such as XSS, SQL Injection, Access Control, CSRF, SSRF, and more.
+  </p>
+  <p>
+    My goal is to become a penetration tester, continuously improving my technical skills and practical knowledge in offensive security. I am highly analytical, detail-oriented, and motivated to keep learning and challenging myself in this field.
+  </p>
+</section>
+
+<section id="projects">
+
+  <h2>Projects</h2>
+  
+  <div class="card">
+    <h3>PortSwigger Labs Achievement</h3>
+    <p>Solved 50+ labs on PortSwigger, covering real-world web security vulnerabilities and attack techniques.</p>
+  </div>
+
+  <div class="card">
+    <h3>Flappy Bird Game (Unity)</h3>
+    <p>Developed a full game independently with gameplay mechanics and UI.</p>
+  </div>
+
+  <div class="card">
+    <h3>Hospital Management System (Java)</h3>
+    <p>Built a system with database integration and object-oriented design.</p>
+  </div>
+
+  <div class="card">
+    <h3>Hotel Management System (C#)</h3>
+    <p>Created a GUI-based application using .NET framework and integrated database features.</p>
+  </div>
+
+  <div class="card">
+    <h3>Connect 4 Game (C)</h3>
+    <p>Implemented game logic and graphics using a custom library.</p>
+  </div>
+
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <p><strong>Languages:</strong> C, C#, Java, JavaScript, Python</p>
+    <p><strong>Tools:</strong> Unity, OOP, Database Design, Burp Suite, Nmap, Kali Linux</p>
+    <p><strong>Soft Skills:</strong> Communication, Teamwork, Adaptability, fluent in English and Arabic</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:mw.ghabn@gmail.com"> mw.ghabn@gmail.com</a></p>
+  <p>Phone: +201005004934</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/malak-ghabn/" target="_blank">Profile</a></p>
+</section>
+
+<footer>
+  <p>© 2026 Malak Ghabn</p>
+</footer>
+
+</body>
+</html>
