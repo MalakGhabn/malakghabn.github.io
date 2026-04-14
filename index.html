@@ -1,232 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-24">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malak Ghabn Portfolio</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
-
-    a{
-        color: #38bdf8;
-    }
-
-    header {
-      padding: 20px;
-      text-align: center;
-      background: #020617;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #38bdf8;
-      font-size: 28px;
-    }
-
-    header p {
-      margin: 5px 0 0;
-      color: #94a3b8;
-      font-size: 14px;
-    }
-
-    /* Floating vertical nav */
-    .side-nav {
-      position: fixed;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 65vh;
-      justify-content: space-around;
-      background: rgba(30, 41, 59, 0.5);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 20px 10px;
-      border-radius: 50px;
-      border: 0.1px solid;
-      border-color: #dddddd2b;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      z-index: 1000;
-    }
-
-    .side-nav a {
-      text-decoration: none;
-      color: #38bdf8;
-      font-size: 13px;
-      text-align: center;
-      padding: 8px 10px;
-      border-radius: 20px;
-      transition: 0.3s;
-    }
-
-    .side-nav a:hover {
-      background: rgba(56, 189, 248, 0.8);
-      color: #020617;
-    }
-
-    /* Tablet responsiveness */
-    @media (max-width: 1160px) {
-      .side-nav {
-        top: auto;
-        bottom: 20px;
-        right: 50%;
-        transform: translateX(50%);
-        flex-direction: row;
-        height: auto;
-        width: 90%;
-        border-radius: 30px;
-        justify-content: space-around;
-        padding: 10px;
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#111111",
+            sand: "#f7f1e8",
+            clay: "#c86b4a",
+            moss: "#7a8b5a"
+          },
+          fontFamily: {
+            display: ["Georgia", "serif"],
+            body: ["Segoe UI", "sans-serif"]
+          }
+        }
       }
-
-      .side-nav a {
-        font-size: 13px;
-        padding: 6px 8px;
-      }
-
-      section {
-        padding: 70px 30px;
-      }
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      .side-nav {
-        top: auto;
-        bottom: 20px;
-        right: 50%;
-        transform: translateX(50%);
-        flex-direction: row;
-        height: auto;
-        width: 90%;
-        border-radius: 30px;
-        justify-content: space-around;
-        padding: 10px;
-      }
-
-      .side-nav a {
-        font-size: 12px;
-        padding: 6px 8px;
-      }
-
-      section {
-        padding: 60px 20px;
-      }
-    }
-
-    section {
-      padding: 60px 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-    }
-
-    h2 {
-      color: #38bdf8;
-    }
-  </style>
+    };
+  </script>
 </head>
-<body>
+<body class="min-h-screen bg-sand font-body text-ink">
+  <div class="fixed inset-x-0 top-0 -z-10 h-72 bg-gradient-to-b from-white/80 via-sand to-transparent"></div>
 
-<header>
-  <h1>Malak Ghabn</h1>
-  <p>Computer & Cyber Security Engineer</p>
-</header>
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-sand/85 shadow-sm backdrop-blur">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <a href="#home" class="font-display text-2xl tracking-wide">Malak Ghabn</a>
+      <nav class="hidden gap-6 text-sm font-semibold uppercase tracking-[0.2em] md:flex">
+        <a href="#about" class="transition hover:text-clay">About</a>
+        <a href="#skills" class="transition hover:text-clay">Skills</a>
+        <a href="#projects" class="transition hover:text-clay">Projects</a>
+        <a href="#contact" class="transition hover:text-clay">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- Vertical Bubble Nav -->
-<div class="side-nav">
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
-</div>
+  <main class="mx-auto max-w-5xl snap-y snap-proximity px-6 pb-20 pt-20" id="home">
+    <section class="grid min-h-screen snap-start gap-10 py-10 md:grid-cols-[1.25fr_0.75fr] md:items-center">
+      <div class="space-y-6">
+        <p class="text-sm uppercase tracking-[0.35em] text-clay">Front-End Web Developer</p>
+        <div class="space-y-4">
+          <h1 class="font-display text-6xl leading-none md:text-8xl">
+            Malak
+            <span class="block text-clay">Ghabn</span>
+          </h1>
+          <p class="max-w-xl text-lg leading-8 text-black/70">
+            I create clean, responsive, and engaging websites that turn ideas into memorable digital
+            experiences.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-clay">
+            View Projects
+          </a>
+          <a href="#contact" class="rounded-full border border-ink px-6 py-3 text-sm font-semibold transition hover:border-clay hover:text-clay">
+            Contact Me
+          </a>
+        </div>
+      </div>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a fourth-year Computer Engineering student at AASTMT with a strong interest in cybersecurity and penetration testing. I chose this field because I have always been passionate about coding, computer networks, and understanding how systems work at a deeper level.
-  </p>
-  <p>
-    I have experience with C, C#, JavaScript, and Python, and I am currently expanding my skills in cybersecurity. I have worked with Kali Linux and Burp Suite, and completed over 50 labs on PortSwigger, covering vulnerabilities such as XSS, SQL Injection, Access Control, CSRF, SSRF, and more.
-  </p>
-  <p>
-    My goal is to become a penetration tester, continuously improving my technical skills and practical knowledge in offensive security. I am highly analytical, detail-oriented, and motivated to keep learning and challenging myself in this field.
-  </p>
-</section>
+      <div class="rounded-[2rem] bg-white p-6 shadow-[0_20px_60px_rgba(17,17,17,0.12)]">
+        <div class="space-y-5">
+          <div class="h-56 rounded-[1.5rem] bg-gradient-to-br from-clay via-orange-200 to-moss"></div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl bg-sand p-4">
+              <p class="text-sm uppercase tracking-[0.2em] text-black/50">Focus</p>
+              <p class="mt-2 text-lg font-semibold">Modern UI Design</p>
+            </div>
+            <div class="rounded-2xl bg-sand p-4">
+              <p class="text-sm uppercase tracking-[0.2em] text-black/50">Goal</p>
+              <p class="mt-2 text-lg font-semibold">Fast, Responsive Pages</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="projects">
+    <section id="about" class="grid snap-start gap-8 py-32 md:grid-cols-[0.8fr_1.2fr] md:items-start">
+      <div class="space-y-4">
+        <p class="text-sm uppercase tracking-[0.35em] text-clay">About</p>
+        <h2 class="font-display text-4xl leading-tight md:text-5xl">Designing websites with clarity and personality.</h2>
+      </div>
+      <div class="space-y-5 rounded-[2rem] bg-white p-8 shadow-[0_20px_60px_rgba(17,17,17,0.08)]">
+        <p class="text-lg leading-8 text-black/75">
+          I am Malak Ghabn, a Front-End Web Developer who enjoys building elegant interfaces that
+          feel smooth, organized, and easy to use. I care about responsive layouts, thoughtful
+          details, and creating websites that look great across devices.
+        </p>
+        <p class="text-lg leading-8 text-black/75">
+          My goal is to combine creativity with solid front-end skills to deliver experiences that
+          are both visually appealing and practical. I am always excited to learn, improve, and
+          bring fresh energy to every project I work on.
+        </p>
+      </div>
+    </section>
 
-  <h2>Projects</h2>
-  
-  <div class="card">
-    <h3>PortSwigger Labs Achievement</h3>
-    <p>Solved 50+ labs on PortSwigger, covering real-world web security vulnerabilities and attack techniques.</p>
-  </div>
+    <section id="skills" class="snap-start py-16">
+      <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div class="space-y-3">
+          <p class="text-sm uppercase tracking-[0.35em] text-clay">Skills</p>
+          <h2 class="font-display text-4xl leading-tight md:text-5xl">Tools I use to build polished front-end experiences.</h2>
+        </div>
+        <p class="max-w-lg text-base leading-7 text-black/65">
+          My toolkit combines strong fundamentals with modern frameworks that help me design and ship responsive websites.
+        </p>
+      </div>
 
-  <div class="card">
-    <h3>Flappy Bird Game (Unity)</h3>
-    <p>Developed a full game independently with gameplay mechanics and UI.</p>
-  </div>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="rounded-[1.75rem] bg-white p-6 shadow-[0_20px_60px_rgba(17,17,17,0.08)]">
+          <p class="text-sm uppercase tracking-[0.2em] text-black/50">Core</p>
+          <h3 class="mt-3 text-2xl font-semibold">HTML</h3>
+          <p class="mt-3 leading-7 text-black/70">Building accessible page structure and clean semantic layouts.</p>
+        </div>
+        <div class="rounded-[1.75rem] bg-white p-6 shadow-[0_20px_60px_rgba(17,17,17,0.08)]">
+          <p class="text-sm uppercase tracking-[0.2em] text-black/50">Style</p>
+          <h3 class="mt-3 text-2xl font-semibold">CSS</h3>
+          <p class="mt-3 leading-7 text-black/70">Creating responsive designs, animations, spacing, and visual hierarchy.</p>
+        </div>
+        <div class="rounded-[1.75rem] bg-white p-6 shadow-[0_20px_60px_rgba(17,17,17,0.08)]">
+          <p class="text-sm uppercase tracking-[0.2em] text-black/50">Logic</p>
+          <h3 class="mt-3 text-2xl font-semibold">JavaScript</h3>
+          <p class="mt-3 leading-7 text-black/70">Adding interactivity, dynamic behavior, and user-focused functionality.</p>
+        </div>
+        <div class="rounded-[1.75rem] bg-white p-6 shadow-[0_20px_60px_rgba(17,17,17,0.08)]">
+          <p class="text-sm uppercase tracking-[0.2em] text-black/50">Framework</p>
+          <h3 class="mt-3 text-2xl font-semibold">Bootstrap</h3>
+          <p class="mt-3 leading-7 text-black/70">Building fast, consistent interfaces with ready-made responsive components.</p>
+        </div>
+        <div class="rounded-[1.75rem] bg-white p-6 shadow-[0_20px_60px_rgba(17,17,17,0.08)]">
+          <p class="text-sm uppercase tracking-[0.2em] text-black/50">Utility</p>
+          <h3 class="mt-3 text-2xl font-semibold">Tailwind</h3>
+          <p class="mt-3 leading-7 text-black/70">Designing custom interfaces quickly with utility-first styling.</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="card">
-    <h3>Hospital Management System (Java)</h3>
-    <p>Built a system with database integration and object-oriented design.</p>
-  </div>
+    <section id="projects" class="snap-start py-1">
+      <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div class="space-y-3">
+          <p class="text-sm uppercase tracking-[0.35em] text-clay">Projects</p>
+          <h2 class="font-display text-4xl leading-tight md:text-5xl">Project cards for the work I want to showcase.</h2>
+        </div>
+      </div>
 
-  <div class="card">
-    <h3>Hotel Management System (C#)</h3>
-    <p>Created a GUI-based application using .NET framework and integrated database features.</p>
-  </div>
+      <div class="grid gap-6 lg:grid-cols-3">
+        <article class="rounded-[2rem] bg-white p-5 shadow-[0_20px_60px_rgba(17,17,17,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(17,17,17,0.12)]">
+          <div class="mb-4 h-32 rounded-[1.5rem] bg-gradient-to-br from-amber-200 via-clay to-orange-100"></div>
+          <p class="text-sm uppercase tracking-[0.2em] text-black/50">Project One</p>
+          <h3 class="mt-3 text-2xl font-semibold">CRUDS System</h3>
+          <p class="mt-3 text-sm leading-6 text-black/70">
+            A JavaScript-based CRUDS project for creating, reading, updating, deleting, and searching products in a simple interface.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm font-semibold text-clay">
+            <span class="rounded-full bg-sand px-3 py-1">HTML</span>
+            <span class="rounded-full bg-sand px-3 py-1">CSS</span>
+            <span class="rounded-full bg-sand px-3 py-1">JavaScript</span>
+          </div>
+        </article>
 
-  <div class="card">
-    <h3>Connect 4 Game (C)</h3>
-    <p>Implemented game logic and graphics using a custom library.</p>
-  </div>
+        <article class="rounded-[2rem] bg-white p-5 shadow-[0_20px_60px_rgba(17,17,17,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(17,17,17,0.12)]">
+          <div class="mb-4 h-32 rounded-[1.5rem] bg-gradient-to-br from-moss via-lime-200 to-white"></div>
+          <p class="text-sm uppercase tracking-[0.2em] text-black/50">Project Two</p>
+          <h3 class="mt-3 text-2xl font-semibold">Book Selling Website</h3>
+          <p class="mt-3 text-sm leading-6 text-black/70">
+            A Bootstrap-based website for browsing and presenting books with a clean layout, clear sections, and responsive design.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm font-semibold text-clay">
+            <span class="rounded-full bg-sand px-3 py-1">Bootstrap</span>
+            <span class="rounded-full bg-sand px-3 py-1">Responsive</span>
+            <span class="rounded-full bg-sand px-3 py-1">UI Design</span>
+          </div>
+        </article>
 
-</section>
+        <article class="rounded-[2rem] bg-white p-5 shadow-[0_20px_60px_rgba(17,17,17,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(17,17,17,0.12)]">
+          <div class="mb-4 h-32 rounded-[1.5rem] bg-gradient-to-br from-stone-200 via-white to-clay"></div>
+          <p class="text-sm uppercase tracking-[0.2em] text-black/50">Project Three</p>
+          <h3 class="mt-3 text-2xl font-semibold">Tours Booking Website</h3>
+          <p class="mt-3 text-sm leading-6 text-black/70">
+            A Bootstrap project for exploring and booking tours through a friendly interface with strong calls to action and organized content.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm font-semibold text-clay">
+            <span class="rounded-full bg-sand px-3 py-1">Bootstrap</span>
+            <span class="rounded-full bg-sand px-3 py-1">Travel UI</span>
+            <span class="rounded-full bg-sand px-3 py-1">Responsive</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="card">
-    <p><strong>Languages:</strong> C, C#, Java, JavaScript, Python</p>
-    <p><strong>Tools:</strong> Unity, OOP, Database Design, Burp Suite, Nmap, Kali Linux</p>
-    <p><strong>Soft Skills:</strong> Communication, Teamwork, Adaptability, fluent in English and Arabic</p>
-  </div>
-</section>
+    <section id="contact" class="snap-start py-16 mt-16">
+      <div class="grid gap-8 rounded-[2.5rem] bg-ink px-8 py-10 text-white md:grid-cols-[1fr_0.9fr] md:px-12">
+        <div class="space-y-4">
+          <p class="text-sm uppercase tracking-[0.35em] text-orange-200">Contact Me</p>
+          <h2 class="font-display text-4xl leading-tight md:text-5xl">Let&apos;s build something beautiful together.</h2>
+          <p class="max-w-xl text-lg leading-8 text-white/75">
+            I am open to freelance work, collaborations, and front-end opportunities. If you would
+            like to work together, I would love to hear from you.
+          </p>
+        </div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:mw.ghabn@gmail.com"> mw.ghabn@gmail.com</a></p>
-  <p>Phone: +201005004934</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/malak-ghabn/" target="_blank">Profile</a></p>
-</section>
+        <div class="grid gap-4 self-start">
+          <div class="rounded-[1.5rem] bg-white/10 p-5">
+            <p class="text-sm uppercase tracking-[0.2em] text-white/60">Email</p>
+            <p class="mt-2 text-lg font-semibold">mw.ghabn@gmail.com</p>
+          </div>
+          <div class="rounded-[1.5rem] bg-white/10 p-5">
+            <p class="text-sm uppercase tracking-[0.2em] text-white/60">GitHub</p>
+            <a href="https://github.com/malakghabn" target="_blank" rel="noreferrer" class="mt-2 inline-block text-lg font-semibold transition hover:text-orange-200">
+              github.com/malakghabn
+            </a>
+          </div>
+          <div class="rounded-[1.5rem] bg-white/10 p-5">
+            <p class="text-sm uppercase tracking-[0.2em] text-white/60">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/malak-ghabn/" target="_blank" rel="noreferrer" class="mt-2 inline-block text-lg font-semibold transition hover:text-orange-200">
+              linkedin.com/in/malak-ghabn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  <p>© 2026 Malak Ghabn</p>
-</footer>
+    <footer class="snap-start border-t border-black/10 py-8 text-center text-sm uppercase tracking-[0.2em] text-black/50">
+      Malak Ghabn Portfolio
+    </footer>
+  </main>
 
 </body>
 </html>
